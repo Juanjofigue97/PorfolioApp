@@ -2,9 +2,24 @@
 
 <PageTitle>Index</PageTitle>
 
-<MudContainer Class="mt-16 px-8" MaxWidth="MaxWidth.False">
-    <MudText Typo="Typo.h1">Projects</MudText>
-    <MudGrid>
+<div>
+    <MudGrid Class="mt-16 px-8">
+        <MudItem xs="12" sm="6" md="6" Class="text-center mb-4">
+            <MudImage Src="JuanJose.png" Width="150" Height="150" Alt="Mony the dog" Elevation="50" Class="rounded-circle" />
+            <MudText Typo="Typo.h3">Hello! I'm Juan José Figueroa</MudText>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="6">
+            <MudText Typo="Typo.h4"> A software developer specializing in backend solutions</MudText>
+            <div class="mt-4">
+                <MudButton Color="Color.Primary" Variant="Variant.Filled">Talk with me</MudButton>
+                <MudButton Color="Color.Secondary" Variant="Variant.Filled">See my work</MudButton>
+            </div>
+        </MudItem>
+    </MudGrid>
+    <MudGrid Style="background-color:#f5f5f0" Class="mt-4 pa-4">
+        <MudItem xs="12">
+            <MudText Typo="Typo.h3">Projects</MudText>
+        </MudItem>
         <MudItem xs="12" sm="6" md="4">
             <MudCard>
                 <MudCardMedia Image="images/door.jpg" Height="200" />
@@ -14,44 +29,22 @@
                     <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
                 </MudCardContent>
                 <MudCardActions>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary">View more details</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard>
+                <MudCardMedia Image="images/door.jpg" Height="200" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h5">Old Paint</MudText>
+                    <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                    <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary">View more details</MudButton>
                 </MudCardActions>
             </MudCard>
         </MudItem>
     </MudGrid>
-    
-    <MudGrid>
-        <MudItem xs="12" sm="6" md="4">
-            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;"></MudPaper>
-        </MudItem>
-        <MudItem xs="12" sm="6" md="4">
-            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;"></MudPaper>
-        </MudItem>
-        <MudItem xs="12" sm="12" md="4">
-            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;"></MudPaper>
-        </MudItem>
-        <MudItem xs="12" sm="6">
-            <MudGrid>
-                <MudItem xs="12">
-                    <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;"></MudPaper>
-                </MudItem>
-                <MudItem xs="12">
-                    <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;"></MudPaper>
-                </MudItem>
-            </MudGrid>
-        </MudItem>
-        <MudItem xs="12" sm="6">
-            <MudPaper Elevation="2" Class="pa-4" Style="height: 100%"></MudPaper>
-        </MudItem>
-        <MudItem xs="12" sm="6" md="4">
-            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;"></MudPaper>
-        </MudItem>
-        <MudItem xs="12" sm="6" md="4">
-            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;"></MudPaper>
-        </MudItem>
-        <MudItem xs="12" sm="12" md="4">
-            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;"></MudPaper>
-        </MudItem>
-    </MudGrid>
-</MudContainer>
+</div>
