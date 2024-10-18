@@ -1,8 +1,8 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Portfolio Juan Figueroa</PageTitle>
 
-<div>
+<div style="overflow: hidden;">
     <MudGrid Class="mt-16 px-8">
         <MudItem xs="12" sm="6" md="6" Class="text-center mb-4">
             <MudImage Src="JuanJose.png" Width="150" Height="150" Alt="Mony the dog" Elevation="50" Class="rounded-circle" />
@@ -12,39 +12,118 @@
             <MudText Typo="Typo.h4"> A software developer specializing in backend solutions</MudText>
             <div class="mt-4">
                 <MudButton Color="Color.Primary" Variant="Variant.Filled">Talk with me</MudButton>
-                <MudButton Color="Color.Secondary" Variant="Variant.Filled">See my work</MudButton>
+                <MudButton Color="Color.Secondary" Variant="Variant.Filled">Resume</MudButton>
             </div>
         </MudItem>
     </MudGrid>
+
     <MudGrid Style="background-color:#f5f5f0" Class="mt-4 pa-4">
         <MudItem xs="12">
-            <MudText Typo="Typo.h3">Projects</MudText>
+            <MudText Typo="Typo.h3">About me</MudText>
         </MudItem>
-        <MudItem xs="12" sm="6" md="4">
-            <MudCard>
-                <MudCardMedia Image="images/door.jpg" Height="200" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Old Paint</MudText>
-                    <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                    <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                </MudCardContent>
-                <MudCardActions>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">View more details</MudButton>
-                </MudCardActions>
-            </MudCard>
-        </MudItem>
-        <MudItem xs="12" sm="6" md="4">
-            <MudCard>
-                <MudCardMedia Image="images/door.jpg" Height="200" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Old Paint</MudText>
-                    <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                    <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                </MudCardContent>
-                <MudCardActions>
-                    <MudButton Variant="Variant.Text" Color="Color.Primary">View more details</MudButton>
-                </MudCardActions>
-            </MudCard>
+        <MudItem xs="12">
+            I am a Software Developer specializing in backend technologies such as C#, Python, MySQL, SQL, ASP.NET, and Django. I also have experience working on the frontend with JavaScript, HTML, CSS, React, and Bootstrap. My strong foundation in programming and mathematical logic fuels my passion for technology and creating solutions to tackle diverse challenges.
+
+            I thrive in collaborative environments, enjoying the opportunity to work closely with my team. As a developer, my goal is to continually expand my knowledge and make a meaningful contribution to the world around me.
         </MudItem>
     </MudGrid>
+    <Proyects />
+    <MudGrid Style="background-color:#f5f5f0" Class="mt-4 pa-4">
+        <MudItem xs="12">
+            <MudText Typo="Typo.h3">Skills</MudText>
+        </MudItem>
+
+        <MudItem Class="p-4">
+            <MudText Typo="Typo.h5" Color="Color.Primary">Tech Stack that I use</MudText>
+            <MudDivider />
+            <!-- Languages -->
+            <MudText Typo="Typo.h6" Color="Color.Info" Class="mt-3">Languages</MudText>
+            <MudGrid>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="@Icons.Material.Filled.Code" Color="Color.Primary" />
+                    <MudText Typo="Typo.body2">C#</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="" Color="Color.Primary" />
+                    <MudText Typo="Typo.body2">Python</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="@Icons.Material.Filled.Html" Color="Color.Primary" />
+                    <MudText Typo="Typo.body2">HTML</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="@Icons.Material.Filled.Css" Color="Color.Primary" />
+                    <MudText Typo="Typo.body2">CSS</MudText>
+                </MudItem>
+            </MudGrid>
+
+            <!-- Frameworks / Libraries -->
+            <MudText Typo="Typo.h6" Color="Color.Info" Class="mt-3">Frameworks / Libraries</MudText>
+            <MudGrid>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="@Icons.Material.Filled.Web" Color="Color.Success" />
+                    <MudText Typo="Typo.body2">ASP.NET</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="@Icons.Material.Filled.LibraryBooks" Color="Color.Success" />
+                    <MudText Typo="Typo.body2">React</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="@Icons.Material.Filled.LibraryBooks" Color="Color.Success" />
+                    <MudText Typo="Typo.body2">Django</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="" Color="Color.Success" />
+                    <MudText Typo="Typo.body2">Bootstrap</MudText>
+                </MudItem>
+            </MudGrid>
+
+            <!-- Tools -->
+            <MudText Typo="Typo.h6" Color="Color.Info" Class="mt-3">Tools</MudText>
+            <MudGrid>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="" Color="Color.Warning" />
+                    <MudText Typo="Typo.body2">Git</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="" Color="Color.Warning" />
+                    <MudText Typo="Typo.body2">SQL</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="@Icons.Material.Filled.Terminal" Color="Color.Warning" />
+                    <MudText Typo="Typo.body2">Linux</MudText>
+                </MudItem>
+                <MudItem xs="6" sm="4" md="3">
+                    <MudIcon Icon="@Icons.Material.Filled.Cloud" Color="Color.Warning" />
+                    <MudText Typo="Typo.body2">Azure</MudText>
+                </MudItem>
+            </MudGrid>
+        </MudItem>
+    </MudGrid>
+    <MudPaper Class="p-4">
+        <MudText Typo="Typo.h3">Languages</MudText>
+
+        <div class="mb-3">
+            <MudText Typo="Typo.h6" GutterBottom="true">Spanish</MudText>
+            <MudProgressLinear Color="Color.Info" Size="Size.Large" Value="100" Class="my-7">
+                <MudText Typo="Typo.subtitle1" Color="Color.Dark">
+                    <b>100%</b>
+                </MudText>
+            </MudProgressLinear>
+            <MudText Typo="Typo.body2">Native Speaker</MudText>
+        </div>
+        <div>
+            <MudText Typo="Typo.h6" GutterBottom="true">English</MudText>
+            <MudProgressLinear Color="Color.Info" Size="Size.Large" Value="55" Class="my-7">
+                <MudText Typo="Typo.subtitle1" Color="Color.Dark">
+                    <b>55%</b>
+                </MudText>
+            </MudProgressLinear>
+            <MudText Typo="Typo.body2">Intermediate (B2) – Cambridge Academy of Languages (Pasto, COL)</MudText>
+        </div>
+
+    </MudPaper>
+
+    <Education />
+    <Contact />
 </div>

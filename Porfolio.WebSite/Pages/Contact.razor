@@ -1,26 +1,45 @@
 ﻿@page "/contact"
-<h3>Contact</h3>
+@using System.ComponentModel.DataAnnotations
+@using Porfolio.WebSite.Models
 
-<MudGrid Style="background-color:#f5f5f0" Class="mt-4 px-8">
-    <MudItem xs="12">
-        <MudText Typo="Typo.h3">Projects</MudText>
-    </MudItem>
-    <MudItem xs="12" sm="6" md="4">
-        <MudCard>
-            <MudCardMedia Image="images/door.jpg" Height="200" />
-            <MudCardContent>
-                <MudText Typo="Typo.h5">Old Paint</MudText>
-                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </MudItem>
-</MudGrid>
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12">
+            <MudCard>
+                <MudCardContent>
+                    <MudTextField Label="Nombre completo" HelperText="Max. 100 caracteres"
+                                  @bind-Value="model.Name" For="@(() => model.Name)" />
+                    <MudTextField Label="Correo electrónico" Class="mt-3"
+                                  @bind-Value="model.Email" For="@(() => model.Email)" />
+                    <MudTextField Label="Asunto" HelperText="Max. 150 caracteres" Class="mt-3"
+                                  @bind-Value="model.Subject" For="@(() => model.Subject)" />
+                    <MudTextField Label="Mensaje" HelperText="Max. 1000 caracteres" Class="mt-3"
+                                  @bind-Value="model.Message" For="@(() => model.Message)" TextArea="true" />
+                    <MudCheckBox Label="Enviar una copia a mi correo" Class="mt-3"
+                                 @bind-Checked="model.SendCopyToSelf" For="@(() => model.SendCopyToSelf)" />
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Enviar</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12">
+            <MudText Typo="Typo.body2" Align="Align.Center">
+                Por favor, completa el formulario correctamente para ver el mensaje de éxito.
+            </MudText>
+        </MudItem>
+    </MudGrid>
+</EditForm>
 
 @code {
+    ContactForm model = new ContactForm();
+    bool success;
 
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
 }

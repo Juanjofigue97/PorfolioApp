@@ -4,40 +4,66 @@
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
+<style>
+    .active-link {
+        background-color: #FF6347; /* Color de tu elección, aquí se usa Tomato */
+    }
 
-@* <MudLayout>
-    <MudAppBar>
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        My Application
-    </MudAppBar>
-    <MudDrawer @bind-Open="@_drawerOpen">
-        <MyNavMenu />
-    </MudDrawer>
-    <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Medium">
-            @Body
-        </MudContainer>
-    </MudMainContent>
-</MudLayout> *@
+    .custom-navlink:hover {
+        /* color: yellow !important; */
+        background-color: #7f70f5 !important;
+        color: ghostwhite !important;
+    }
+
+    .custom-navlink {
+        color: ghostwhite !important;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        height: 100%; /* Asegura que el contenedor ocupe todo el espacio vertical */
+    }
+</style>
 
 <MudLayout>
-    <MudAppBar Elevation="1">
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        <MudText Typo="Typo.h5" Class="ml-3">Portfolio JF</MudText>
+    <MudAppBar Elevation="0" Dense="true">
+        <div class="d-flex justify-space-between" style="width: 100%">
+            <div>
+                <MudHidden Breakpoint="Breakpoint.SmAndUp">
+                    <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.End" OnClick="@DrawerToggle" />
+                </MudHidden>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <MudHidden Breakpoint="Breakpoint.Xs">
+                    <MudLink Href="/" Class="custom-navlink" Underline="Underline.None">Home</MudLink>
+                    <MudNavLink Href="/" Match="NavLinkMatch.All" IconColor="Color.Secondary" Class="custom-navlink" >
+                        Home
+                    </MudNavLink>
+                    <MudNavLink Href="/proyects" Match="NavLinkMatch.All">Proyects</MudNavLink>
+                    <MudNavLink Href="/contact" Match="NavLinkMatch.All">Contact</MudNavLink>
+                    <MudNavLink Href="/about" Match="NavLinkMatch.All">About</MudNavLink>
+                </MudHidden>
+            </div>
+            <div></div>
+        </div>
         <MudSpacer />
         <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Href="https://github.com/Juanjofigue97" />
-        <MudIconButton Icon="@Icons.Material.Filled.DynamicForm" Color="Color.Inherit"/>
+        <MudIconButton Icon="@Icons.Material.Filled.DynamicForm" Color="Color.Inherit" />
     </MudAppBar>
-    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="2" Color="Color.Default" Breakpoint="Breakpoint.None" Variant="@DrawerVariant.Temporary">
         <MyNavMenu />
     </MudDrawer>
+
+    <!-- Opciones de menú visibles en pantallas medianas y grandes -->
     <MudMainContent>
-        @Body
+        <MudPaper MaxWidth="1000px" Style="margin: 0 auto">
+            @Body
+        </MudPaper>
     </MudMainContent>
 </MudLayout>
 
 @code {
-    bool _drawerOpen = true;
+    bool _drawerOpen = false;
 
     void DrawerToggle()
     {
